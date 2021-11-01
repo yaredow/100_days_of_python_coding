@@ -16,7 +16,7 @@ a: 3
 b: 5
 ```
 
-# Example Output
+# Example Outputs
 
 ```
 a: 5
