@@ -1,6 +1,6 @@
 ## Day three of 100
 
-### In this patricular day i have learned
+### Beginner control flow and logical opertors
 
 * Conditional statements
 * nested functional loop
