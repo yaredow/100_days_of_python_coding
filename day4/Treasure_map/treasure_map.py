@@ -10,5 +10,5 @@ y_direction = int(position[1])
 
 selected_row = map[y_direction -1]
 selected_row[x_direction - 1] = 'X'
-# print the result
+# print the results
 print(f"{row1}\n{row2}\n{row3}")
