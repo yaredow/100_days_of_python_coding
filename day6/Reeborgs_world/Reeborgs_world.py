@@ -14,3 +14,12 @@ def jump():
 
 for step in range(6):
     jump()
+
+# or using while loop instead
+
+number_of_hurdle = 6
+while number_of_hurdle > 0:
+    jump()
+    number_of_hurdle -= 1
+    print(number_of_hurdle)
+    
