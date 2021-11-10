@@ -20,7 +20,7 @@ the first step in creating the Hangman game is to create.
 
 * Use a while loop to let the user guess again. The loop should only stop once the user has guessed all the letters in the chosen_word and 'display' has no more blanks ("_"). Then you can tell the user they've won.
 
-### step fou
+### step four
 * Create a variable called 'lives' to keep track of the number of lives left. 
 * Set 'lives' to equal 6
 * If guess is not a letter in the chosen_word,
@@ -29,4 +29,13 @@ the first step in creating the Hangman game is to create.
 * Join all the elements in the list and turn it into a String.
 * Join all the elements in the list and turn it into a String.
 * print the ASCII art from 'stages' that corresponds to the current number of 'lives' the user has remaining.
-    
+
+### step five 
+* Update the word list to use the 'word_list' from hangman_words.py
+* Delete this line: word_list = ["ardvark", "baboon", "camel"]
+* Import the logo from hangman_art.py and print it at the start of the game.
+* If the user has entered a letter they've already guessed, print the letter and let them know.
+* If the letter is not in the chosen_word, print out the letter and let them know it's not in the word.
+* Join all the elements in the list and turn it into a String.
+* Check if user has got all letters.
+* Import the stages from hangman_art.py and make this error go away.
