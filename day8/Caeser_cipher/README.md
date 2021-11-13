@@ -15,6 +15,15 @@ According to wikipedia a Caesar cipher, also known as Caesar's cipher, the shift
   #plain_text = "hello"
   #print output: "The decoded text is hello"
 * Check if the user wanted to encrypt or decrypt the message by checking the 'direction' variable. Then call the correct function based on that 'drection' variable. You should be able to test the code to encrypt *AND* decrypt a message.
-## Step three: combining the encrypt and decrypt function
+### Step three: combining the encrypt and decrypt function
 * Combine the encrypt() and decrypt() functions into a single function called caesar().
 *  Call the caesar() function, passing over the 'text', 'shift' and 'direction' values.
+### Step four: The final step
+* Import and print the logo from art.py when the program starts.
+* Can you figure out a way to ask the user if they want to restart the cipher program?
+#e.g. Type 'yes' if you want to go again. Otherwise type 'no'.
+#If they type 'yes' then ask them for the direction/text/shift again and call the caesar
+* What if the user enters a shift that is greater than the number of letters in the alphabet?
+#Try running the program and entering a shift number of 45.
+#Add some code so that the program continues to work even if the user enters a shift number greater than 26. 
+#Hint: Think about how you can use the modulus (%).
