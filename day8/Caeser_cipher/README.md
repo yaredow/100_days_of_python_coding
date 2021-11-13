@@ -15,4 +15,6 @@ According to wikipedia a Caesar cipher, also known as Caesar's cipher, the shift
   #plain_text = "hello"
   #print output: "The decoded text is hello"
 * Check if the user wanted to encrypt or decrypt the message by checking the 'direction' variable. Then call the correct function based on that 'drection' variable. You should be able to test the code to encrypt *AND* decrypt a message.
-* 
+## Step three: combining the encrypt and decrypt function
+* Combine the encrypt() and decrypt() functions into a single function called caesar().
+*  Call the caesar() function, passing over the 'text', 'shift' and 'direction' values.
