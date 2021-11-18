@@ -20,4 +20,4 @@
 - <b>Day 8</b> - [Function Parameters & Caesar Cipher](https://github.com/yaredow/100_days_of_python_coding/tree/master/Day%208)
 
 - <b>Day 9</b> - [Dictionaries, Nesting and the Secret Auction](https://github.com/yaredow/100_days_of_python_coding/tree/master/Day%209)
-
+- <b>Day 10</b> - [Functions with outputs]()
