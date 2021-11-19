@@ -17,13 +17,6 @@ num2 = int(input("What is the second number?: "))
 for symbol in operations:
     print(symbol)
 choosen_symbol = input("Please Choose an operation: ")
-if choosen_symbol == "+":
-    print("{} {} {} = {}".format(num1, choosen_symbol, num2,  add(num1, num2)))
-elif choosen_symbol == "-":
-    print("{} {} {} = {}".format(num1, choosen_symbol, num2,  sub(num1, num2)))
-elif choosen_symbol == "*":
-    print("{} {} {} = {}".format(num1, choosen_symbol, num2,  mul(num1, num2)))
-elif choosen_symbol == "/":
-    print("{} {} {} = {}".format(num1, choosen_symbol, num2,  div(num1, num2)))
-else:
-    print("Invalid input!")
+function_operation = operations[choosen_symbol]
+first_answer = function_operation(num1, num2)
+print("{} {} {} ={}".format(num1, choosen_symbol, num2, function_operation(num1, num2)))
