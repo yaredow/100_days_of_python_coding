@@ -21,3 +21,7 @@
 
 - <b>Day 9</b> - [Dictionaries, Nesting and the Secret Auction](https://github.com/yaredow/100_days_of_python_coding/tree/master/Day%209)
 - <b>Day 10</b> - [Functions with outputs](https://github.com/yaredow/100_days_of_python_coding/tree/master/Day%2010)
+- <b>Day 11</b> - [Capstone Project](https://github.com/yaredow/100_days_of_python_coding/tree/master/Day%2011)
+- <b>Day 12</b> - [Beginner - Scope & Number Guessing Game](https://github.com/yaredow/100_days_of_python_coding/tree/master/Day%2012)
+- <b>Day 13</b> - [Debugging](https://github.com/yaredow/100_days_of_python_coding/tree/master/Day%2013)
+- 
