@@ -9,15 +9,15 @@ def difficulty_level():
         return EASY_LEVEL_TURN
     else:
         return HARD_LEVEL_TURN
-def guess_evaluater(guess, number, turns):
-    if guess > number:
+def guess_evaluator(guess, answer, turns):
+    if guess > answer:
+        print("Too High")
+        return turns -1
+    elif guess < answer:
         print("Too low")
         return turns -1
-    elif guess < number:
-        print("Too high")
-        return turns -1
     else:
-        print("You got it. The answer was {}".format(number))
+        print("You got it. The answer was {}".format(answer))
 
 def game():
     print(logo)
@@ -29,9 +29,11 @@ def game():
     while guess != answer:
         print("You have {} attempts to guess the number.".format(turns))
         guess = int(input("Make a guess: "))
-        turns = guess_evaluater(guess, answer, turns)
+        turns = guess_evaluator(guess, answer, turns)
         if turns == 0:
             print("You are out of attempts. You lose")
+            return
+        
         elif guess != answer:
             print("Guess again")
 game()
