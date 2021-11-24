@@ -60,7 +60,9 @@ choice_B = random.choice(Clebritites_instagram)
 def compare(choice_A, choice_B, user_choice):
     print("Compare A: {}, a {}, from {}.".format(choice_A["Name"], choice_A["Profession"], choice_A["Country"]))
     print(vs)
-
+    print("Against B: {}, a {}, from {}.".format(choice_B["Name"], choice_B["Profession"], choice_B["Country"]))
+    
 
 
 user_choice = input("Who has more follower? 'A' or 'B'? ")
+compare(choice_A, choice_B, user_choice)
