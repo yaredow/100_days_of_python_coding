@@ -1,8 +1,8 @@
-Clebritites_instagram = [
+Celebritites_instagram = [
     {
         "Name": "Christiano Ronaldo",
         "Profession": "Football player",
-        "country": "Portugal",
+        "Country": "Portugal",
         "Followers": 315.75
     },
     {
