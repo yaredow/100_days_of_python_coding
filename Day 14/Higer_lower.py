@@ -22,11 +22,14 @@ def check(number_of_followers_a, number_of_followers_b, user_guess):
 
 def game():
     continue_operation = True
+    choice_b = random.choice(Celebritites_instagram)
     while continue_operation:
         print(logo)
         # generate a random dictionaries from the nested list
-        choice_a = random.choice(Celebritites_instagram)    
-        choice_b = random.choice(Celebritites_instagram) 
+        choice_a = choice_b
+        choice_b = random.choice(Celebritites_instagram)
+        while choice_a == choice_b:
+            choice_b = random.choice(Celebritites_instagram)
         # pick number of followers from the randomly generated dictionery
         number_of_followers_a = choice_a["Followers"]
         number_of_followers_b = choice_b["Followers"]
