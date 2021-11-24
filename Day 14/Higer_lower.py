@@ -1,4 +1,8 @@
 import random
+import art
+from art import vs
+# a list of dictionaries nested inside of a list from which the celebrities info extracted
+
 Clebritites_instagram = [
     {
         "Name": "Christiano Ronaldo",
@@ -50,3 +54,13 @@ Clebritites_instagram = [
     }
     
     ]
+choice_A = random.choice(Clebritites_instagram)    
+choice_B = random.choice(Clebritites_instagram)  
+
+def compare(choice_A, choice_B, user_choice):
+    print("Compare A: {}, a {}, from {}.".format(choice_A["Name"], choice_A["Profession"], choice_A["Country"]))
+    print(vs)
+
+
+
+user_choice = input("Who has more follower? 'A' or 'B'? ")
