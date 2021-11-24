@@ -1,6 +1,6 @@
 ## Day fourteen of 100 days of coding 
 
-### Higher or Lower Game
+### Beginner - Higher Lower Game Project
 
 ## Discription
 
