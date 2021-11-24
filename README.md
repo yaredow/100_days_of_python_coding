@@ -24,3 +24,4 @@
 - <b>Day 11</b> - [Capstone Project](https://github.com/yaredow/100_days_of_python_coding/tree/master/Day%2011)
 - <b>Day 12</b> - [Beginner - Scope & Number Guessing Game](https://github.com/yaredow/100_days_of_python_coding/tree/master/Day%2012)
 - <b>Day 13</b> - [Debugging](https://github.com/yaredow/100_days_of_python_coding/tree/master/Day%2013)
+- <b>Day 13</b> - [Beginner - Higher Lower Game Project](https://github.com/yaredow/100_days_of_python_coding/tree/master/Day%2014)
