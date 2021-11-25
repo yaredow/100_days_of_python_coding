@@ -20,12 +20,12 @@ def check(number_of_followers_a, number_of_followers_b, user_guess):
     else:
         return False
 
-
+score = 0
 continue_operation = True
+# generate a random dictionaries from the nested list
 choice_b = random.choice(Celebritites_instagram)
+print(logo)
 while continue_operation:
-    print(logo)
-    # generate a random dictionaries from the nested list
     choice_a = choice_b
     choice_b = random.choice(Celebritites_instagram)
     while choice_a == choice_b:
@@ -33,10 +33,7 @@ while continue_operation:
     # pick number of followers from the randomly generated dictionery
     number_of_followers_a = choice_a["Followers"]
     number_of_followers_b = choice_b["Followers"]
-
-    # Check if both the generated values are equal. if they are equal generated the second one again 
-    if choice_a == choice_b:
-        choice_b = random.choice(Celebritites_instagram)
+    
     print("Compare A: {}".format(format_data(choice_a)))
     print(vs)
     print("Against B: {}".format(format_data(choice_b)))
@@ -44,7 +41,6 @@ while continue_operation:
     # recieve user guess and store it in avariable called "guess"
     user_guess = input("Who has more followers? Type 'A' or 'B': ").lower()
 
-    score = 0
     follower_check = check(number_of_followers_a, number_of_followers_b, user_guess)
     if follower_check == True:
         score += 1
@@ -52,5 +48,4 @@ while continue_operation:
     else:
         print("Sorry, that's wrong. Final score: {}".format(score))
         continue_operation = False
-
 
