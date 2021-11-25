@@ -13,9 +13,9 @@ def clear():
 
 def format_data(account):
     """returns a formatted list of dictionaries"""
-    celeb_name = account["Name"]
-    celeb_profession = account["Profession"]
-    celeb_country = account["Country"]
+    celeb_name = account["name"]
+    celeb_profession = account["description"]
+    celeb_country = account["country"]
     return "{}, a {}, from {}".format(celeb_name, celeb_profession, celeb_country)
 
 
@@ -39,8 +39,8 @@ def game():
         while choice_a == choice_b:
             choice_b = random.choice(Celebritites_instagram)
         # pick number of followers from the randomly generated dictionary
-        number_of_followers_a = choice_a["Followers"]
-        number_of_followers_b = choice_b["Followers"]
+        number_of_followers_a = choice_a["follower_count"]
+        number_of_followers_b = choice_b["follower_count"]
 
         print("Compare A: {}".format(format_data(choice_a)))
         print(vs)
