@@ -47,8 +47,8 @@ def game():
         print("Against B: {}".format(format_data(choice_b)))
         # receive user guess and store it in variable called "guess"
         user_guess = input("Who has more followers? Type 'A' or 'B': ").lower()
-        # clear the screen after the players saw their score
         follower_check = check(number_of_followers_a, number_of_followers_b, user_guess)
+        # clear the screen after the players saw their score
         clear()
         print(logo)
         if follower_check == True:
