@@ -1,8 +1,7 @@
 import random
 from Game_data import Celebritites_instagram
 import art
-from art import vs
-from art import logo
+from art import logo, vs
 import os
 
 
