@@ -30,33 +30,52 @@ resources = {
     "coffee": 100,
 }
 
-def coins():
-    coin = 0
+profit = 0 
+
+
+def process_coins():
+    total_coin = 0
+    print("Please inter coins: ")
     quarter = float(input("how many quarters? "))
-    coin += quarter * 0.25
+    total_coin += quarter * 0.25
     dime = float(input("how many dimes?: "))
-    coin += dime * 0.1
+    total_coin += dime * 0.1
     nickel = float(input("how many nickels? "))
-    coin += nickel * 0.05
+    total_coin += nickel * 0.05
     penny = float(input("how many pennies? "))
-    coin += penny * 0.01
-    return coin
-
-#TODO: 1. prompt the user by asking what they would like.
-user_choice = input("What would you like? (espresso/latte/cappuccino):\n")
-coins = input("Please insert coins:\n")
-#TODO: 5. Process coins.
-print("Please insert coins.")
-coins()
-
-#TODO: 2. Turn off the Coffee Machine by entering “​off​” to the prompt.
-
-#TODO: 3. Print report.
-
-#TODO: 4. Check resources sufficient?
+    total_coin += penny * 0.01
+    return total_coin
 
 
+def is_enough_ingrident(required_ingrident):
+    is_enough = True
+    for item in required_ingrident:
+        required_ingrident[item] >= resources[item]
+        is_enough = False
+    return is_enough  
 
-#TODO: 6. Check transaction successful?
 
-#TODO: 7. Make Coffee.
+def transaction_check(money_recived, drink_cost):
+    if money_recived > drink_cost:
+        global profit
+        change = money_recived - drink_cost - drink_cost
+        profit += change
+    else:
+        print("​Sorry that's not enough money. Money refunded.")
+        return False
+
+is_on = True
+while is_on:
+    user_choice = input("​What would you like? (espresso/latte/cappuccino): ")
+    if user_choice == "off":
+        is_on = False
+    elif user_choice == "report":
+        print("Water: {}ml".format(resources['water']))
+        print("Milk: {}ml".format(resources['milk']))
+        print("Coffee: {}g".format(resources['coffee']))
+    else:
+        drink = MENU[user_choice]
+        if is_enough_ingrident(drink["ingredients"]):
+            payment = process_coins()
+            transaction_check(payment, drink["cost"])
+            
