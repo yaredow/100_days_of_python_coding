@@ -33,33 +33,29 @@ resources = {
 profit = 0 
 
 
+def is_enough_ingrident(orderd_ingrident):
+    for item in orderd_ingrident:
+        orderd_ingrident[item] > resources[item]
+        return False
+    return True
+
+
 def process_coins():
-    total_coin = 0
-    print("Please inter coins: ")
-    quarter = float(input("how many quarters? "))
-    total_coin += quarter * 0.25
-    dime = float(input("how many dimes?: "))
-    total_coin += dime * 0.1
-    nickel = float(input("how many nickels? "))
-    total_coin += nickel * 0.05
-    penny = float(input("how many pennies? "))
-    total_coin += penny * 0.01
+    print("Please insert coins")
+    total_coin = int(input("How many quarters?: ")) * 0.25
+    total_coin += int(input("How many dimes?: ")) * 0.1
+    total_coin += int(input("How many nickles?: ")) * 0.05 
+    total_coin += int(input("How many pennies?: ")) * 0.01
     return total_coin
 
 
-def is_enough_ingrident(required_ingrident):
-    is_enough = True
-    for item in required_ingrident:
-        required_ingrident[item] >= resources[item]
-        is_enough = False
-    return is_enough  
-
-
 def transaction_check(money_recived, drink_cost):
-    if money_recived > drink_cost:
+    if money_recived >= drink_cost:
         global profit
-        change = money_recived - drink_cost - drink_cost
+        change = round(money_recived - drink_cost, 2)
         profit += change
+        print("Here is ${} in change".format(profit))
+        return True
     else:
         print("​Sorry that's not enough money. Money refunded.")
         return False
