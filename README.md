@@ -26,3 +26,4 @@
 - <b>Day 13</b> - [Debugging](https://github.com/yaredow/100_days_of_python_coding/tree/master/Day%2013)
 - <b>Day 14</b> - [Beginner - Higher Lower Game Project](https://github.com/yaredow/100_days_of_python_coding/tree/master/Day%2014)
 - <b>Day 15</b> - [Intermediate - Local Development Environment Setup & the Coffee Machine](https://github.com/yaredow/100_days_of_python_coding/tree/master/Day%2015)
+- <b>Day 16</b> - [Intermediate - Object Oriented Programming (OOP)](https://github.com/yaredow/100_days_of_python_coding/tree/master/Day%2016)
