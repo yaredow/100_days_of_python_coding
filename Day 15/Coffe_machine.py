@@ -32,15 +32,23 @@ resources = {
 
 profit = 0 
 
+def make_coffee(drink_name, orderd_ingrident):
+    """Recives drink name and orderd_ingrident and prints the coffee"""
+    for item in orderd_ingrident:
+        resources[item] -= orderd_ingrident[item]
+    print("Here is your {}. Enjoy!".format(drink_name))
+
 
 def is_enough_ingrident(orderd_ingrident):
+    """Recieves ingredients checks if there is enough ingredient left for makign user choice"""
     for item in orderd_ingrident:
-        orderd_ingrident[item] > resources[item]
+        orderd_ingrident[item] >= resources[item]
         return False
     return True
 
 
 def process_coins():
+    """Ask the user to insert coins and calculate the total amount of coin"""
     print("Please insert coins")
     total_coin = int(input("How many quarters?: ")) * 0.25
     total_coin += int(input("How many dimes?: ")) * 0.1
@@ -50,6 +58,7 @@ def process_coins():
 
 
 def transaction_check(money_recived, drink_cost):
+    """Recives payment and the drink cost and returns True or False"""
     if money_recived >= drink_cost:
         global profit
         change = round(money_recived - drink_cost, 2)
@@ -73,5 +82,5 @@ while is_on:
         drink = MENU[user_choice]
         if is_enough_ingrident(drink["ingredients"]):
             payment = process_coins()
-            transaction_check(payment, drink["cost"])
-            
+            if transaction_check(payment, drink["cost"]):
+                make_coffee(user_choice, drink["ingredients"])
