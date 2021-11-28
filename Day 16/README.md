@@ -7,3 +7,5 @@
 * What are Attributes and Methoods
 * class
 * object
+* What is Pascal Case
+* 
