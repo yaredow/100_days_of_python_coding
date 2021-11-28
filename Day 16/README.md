@@ -5,4 +5,5 @@
 
 * What is OOP 
 * What are Attributes and Methoods
-* 
+* class
+* object
