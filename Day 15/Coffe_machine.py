@@ -32,19 +32,14 @@ resources = {
 
 profit = 0 
 
-def make_coffee(drink_name, orderd_ingrident):
-    """Recives drink name and orderd_ingrident and prints the coffee"""
-    for item in orderd_ingrident:
-        resources[item] -= orderd_ingrident[item]
-    print("Here is your {}. Enjoy!".format(drink_name))
-
 
 def is_enough_ingrident(orderd_ingrident):
     """Recieves ingredients checks if there is enough ingredient left for makign user choice"""
     for item in orderd_ingrident:
-        orderd_ingrident[item] >= resources[item]
-        return False
-    return True
+        if orderd_ingrident[item] > resources[item]:
+            return False
+        else:
+            return True
 
 
 def process_coins():
@@ -69,6 +64,14 @@ def transaction_check(money_recived, drink_cost):
         print("​Sorry that's not enough money. Money refunded.")
         return False
 
+
+def make_coffee(drink_name, orderd_ingrident):
+    """Recives drink name and orderd_ingrident and prints the coffee"""
+    for item in orderd_ingrident:
+        resources[item] -= orderd_ingrident[item]
+    print("Here is your {} ☕. Enjoy!".format(drink_name))
+
+
 is_on = True
 while is_on:
     user_choice = input("​What would you like? (espresso/latte/cappuccino): ")
@@ -78,6 +81,7 @@ while is_on:
         print("Water: {}ml".format(resources['water']))
         print("Milk: {}ml".format(resources['milk']))
         print("Coffee: {}g".format(resources['coffee']))
+        print("")
     else:
         drink = MENU[user_choice]
         if is_enough_ingrident(drink["ingredients"]):
