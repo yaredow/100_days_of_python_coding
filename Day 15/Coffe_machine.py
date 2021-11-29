@@ -81,10 +81,14 @@ while is_on:
         print("Water: {}ml".format(resources['water']))
         print("Milk: {}ml".format(resources['milk']))
         print("Coffee: {}g".format(resources['coffee']))
-        print("")
-    else:
+        print("Money: ${}".format(profit))
+    elif user_choice == "latte" or user_choice == "espresso" or user_choice == "capuccino":
         drink = MENU[user_choice]
         if is_enough_ingrident(drink["ingredients"]):
             payment = process_coins()
             if transaction_check(payment, drink["cost"]):
                 make_coffee(user_choice, drink["ingredients"])
+    else:
+        print("Wrong input")
+                    
+    
