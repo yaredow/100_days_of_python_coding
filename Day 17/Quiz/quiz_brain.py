@@ -25,4 +25,5 @@ class QuizBrain:
             print("Your current score is {}".format(self.score))
         else:
             print("That's wrong.".format(correct_answer))
-        print("The correct answer is ")
+        print("The correct answer is {}".format(correct_answer))
+        print("Your current score is: {}/{}".format(self.score, self.question_number))
