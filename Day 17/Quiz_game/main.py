@@ -8,7 +8,10 @@ for item in question_data:
     question_answer = item["answer"]
     new_question = Question(question_text, question_answer)
     question_bank.append(new_question)
-
 quiz = QuizBrain(question_bank)
-while quiz.still_has_question:
+while quiz.still_has_question():
     quiz.next_question()
+    
+print("You have complated the quiz!")
+print("Your final score was: {}/{}".format(quiz.score, len(quiz.question_number)))
+
