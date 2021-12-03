@@ -5,6 +5,7 @@ tim = Turtle()
 screen = Screen()
 tim.shape("turtle")
 tim.pensize(10)
+tim.speed("fast")
 screen.colormode(255)
 
 direction = [0, 90, 180, 270]
@@ -17,7 +18,7 @@ def color_choice():
     return rand_color
 
 
-for _ in range(300):
+for _ in range(1000):
     tim.pencolor(color_choice())
     tim.forward(25)
     tim.setheading(random.choice(direction))
