@@ -23,7 +23,6 @@ for _ in range(1000):
     tim.forward(25)
     tim.setheading(random.choice(direction))
 
-
 screen.exitonclick()
 
 
