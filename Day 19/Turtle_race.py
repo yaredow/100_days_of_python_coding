@@ -22,8 +22,17 @@ if user_input:
     is_race_on = True
 
 while is_race_on:
-    random_distance = random.randint(0, 10)
-    turtle.forward(random_distance)
+    for turtle in all_turtle:
+        if turtle.xcor() > 230:
+            is_race_on = False
+            winner_color = turtle.pencolor()
+            if winner_color == user_input:
+                print("You have won. {} win the game".format(winner_color))
+            else:
+                print("You have lost. {} is the winner".format(winner_color))
+
+        random_distance = random.randint(0, 10)
+        turtle.forward(random_distance)
 
 
 
