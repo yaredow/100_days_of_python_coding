@@ -1,5 +1,5 @@
-from snake import Snake
 from turtle import Screen
+from snake import Snake
 import time
 
 screen = Screen()
@@ -11,6 +11,14 @@ screen.title("Snake Game")
 
 snake = Snake()
 snake.create_snake()
+screen.listen()
+screen.onkey(snake.up, "Up")
+screen.onkey(snake.down, "Down")
+screen.onkey(snake.left, "Left")
+screen.onkey(snake.right, "Right")
+
+
+
 
 is_game_on = True
 while is_game_on:
