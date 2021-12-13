@@ -1,4 +1,6 @@
-## I have started a 100 days python course on udemy
+## 100 days of code 
+
+I have enrolled on one of Udemy's best selling bootcamp prepared by London App brewary and the course is given by  instructor Angela Yu.
 
 <img src="https://blog.hyperiondev.com/wp-content/uploads/2018/11/Blog-100DaysOfCode.jpg" class="img-responsive" alt="Responsive image" width=auto height=auto>
 
