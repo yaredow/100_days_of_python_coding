@@ -1,16 +1,15 @@
 from turtle import Turtle
 
 
-class R_paddle(Turtle):
+class Paddle_l(Turtle):
     def __init__(self):
         super().__init__()
         self.shape("square")
         self.shapesize(stretch_len=1, stretch_wid=5)
-        self.color("white")
+        self.color("blue")
         self.speed("fastest")
         self.penup()
         self.goto(350, 0)
-
 
     def go_up(self):
         new_y = self.ycor() + 20
@@ -21,7 +20,7 @@ class R_paddle(Turtle):
         self.goto(self.xcor(), new_y)
 
 
-class L_paddle(R_paddle):
+class Paddle_r(Paddle_l):
     def __init__(self):
         super().__init__()
         self.goto(-350, 0)
@@ -33,10 +32,3 @@ class L_paddle(R_paddle):
     def down(self):
         new_y = self.ycor() - 20
         self.goto(self.xcor(), new_y)
-
-
-
-
-
-
-
