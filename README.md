@@ -3,8 +3,8 @@
 I have enrolled on one of Udemy's best selling bootcamp prepared by London App brewary and the course is given by  instructor Angela Yu. This 100 days of python coding challenge is all about mastering Python by building 100 projects in 100 days. It includes: 
 * data science 
 * automation
-* build websites
-* games and apps
+* websites building
+* games and apps development
 
 <img src="https://blog.hyperiondev.com/wp-content/uploads/2018/11/Blog-100DaysOfCode.jpg" class="img-responsive" alt="Responsive image" width=auto height=auto>
 
