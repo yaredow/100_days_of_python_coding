@@ -39,3 +39,7 @@ I have enrolled on one of Udemy's best selling bootcamp prepared by London App b
 - <b>Day 20</b> - [Intermediate - Build the Snake Game Part 1 Animation & Coordinates](https://github.com/yaredow/100_days_of_python_coding/tree/master/Day%2020)
 - <b>Day 21</b> - [Intermediate - Build the Snake Game Part 2 Inheritance & List Slicing](https://github.com/yaredow/100_days_of_python_coding/tree/master/Day%2021)
 - <b>Day 22</b> - [Intermediate - Build Pong The Famous Arcade Game](https://github.com/yaredow/100_days_of_python_coding/tree/master/Day%2022)
+- <b>Day 23</b> - [Intermediate - The Turtle Crossing Capstone Project](https://github.com/yaredow/100_days_of_python_coding/tree/master/Day%2023)
+- <b>Day 24</b> - [Intermediate - Files, Directories and Paths](https://github.com/yaredow/100_days_of_python_coding/tree/master/Day%2024)
+- <b>Day 25</b> - [Intermediate - Working with CSV Data and the Pandas Library](https://github.com/yaredow/100_days_of_python_coding/tree/master/Day%2025#intermediate---working-with-csv-data-and-the-pandas-library)
+- <b>Day 26</b> - [Day 26 - Intermediate - List Comprehension and the NATO Alphabet](https://github.com/yaredow/100_days_of_python_coding/tree/master/Day%2026)
