@@ -6,17 +6,10 @@ image = "addis_ababa.gif"
 screen.addshape(image)
 turtle.shape(image)
 
-
-# def get_mouse_click_coor(x, y):
-#     print(x, y)
-#
-# turtle.onscreenclick(get_mouse_click_coor)
-#
-# turtle.mainloop()
-
 num_guess = []
 while len(num_guess) < 10:
-    user_guess = str(screen.textinput(title="{}/10 correctly guessed".format(len(num_guess)), prompt="How many other sub-city can you guess?")).title()
+    user_guess = str(screen.textinput(title="{}/10 correctly guessed".format(len(num_guess)),
+                                      prompt="How many other sub-city can you guess?")).title()
     cities = pd.read_csv("Sheger_cities.csv")
     list_of_cities = cities.City.to_list()
 
@@ -30,16 +23,10 @@ while len(num_guess) < 10:
         sheger.write(user_guess, font=("Courier", 10, "normal"))
 
     if user_guess == "Exit":
-        correct_guess = []
-        for sub_city in list_of_cities:
-            if sub_city not in num_guess:
-                correct_guess.append(sub_city)
+        correct_guess = [sub_city for sub_city in list_of_cities if user_guess not in list_of_cities]
         break
 
 df = pd.DataFrame(correct_guess)
 df.to_csv("Sub_cities_for_study.csv")
-
-
-
 
 screen.exitonclick()
