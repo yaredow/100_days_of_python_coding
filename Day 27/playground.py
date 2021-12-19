@@ -33,6 +33,10 @@ def spin_box():
     print(spinbox.get())
 
 
+spinbox = Spinbox(from_=0, to=10, width=5, command=spin_box)
+spinbox.pack()
+
+
 # checkbutton
 def checked_button():
     print(checked_state.get())
@@ -41,7 +45,15 @@ def checked_button():
 checked_state = IntVar()
 checkbutton = Checkbutton(text="Is on", variable=checked_state, command=checked_button)
 checkbutton.pack()
-spinbox = Spinbox(from_=0, to=10, width=5, command=spin_box)
-spinbox.pack()
+
+
+# creating a radio box
+def radio_used():
+    print(radio_state.get())
+
+
+radio_state = IntVar()
+radio = Radiobutton(text="Option", variable=radio_state, command=radio_used)
+radio.pack()
 
 window.mainloop()
