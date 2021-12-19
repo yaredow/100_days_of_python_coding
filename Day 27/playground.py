@@ -26,4 +26,22 @@ text.config(height=5, width=15)
 text.focus()
 text.insert(END, "Example of text")
 text.pack()
+
+
+# creating a spin box
+def spin_box():
+    print(spinbox.get())
+
+
+# checkbutton
+def checked_button():
+    print(checked_state.get())
+
+
+checked_state = IntVar()
+checkbutton = Checkbutton(text="Is on", variable=checked_state, command=checked_button)
+checkbutton.pack()
+spinbox = Spinbox(from_=0, to=10, width=5, command=spin_box)
+spinbox.pack()
+
 window.mainloop()
