@@ -3,9 +3,11 @@ import pandas
 import random
 
 BACKGROUND_COLOR = "#B1DDC6"
+data_dict = {}
+random_dict = {}
 
 # ---------------------------- New flash card ------------------------------- #
-data_dict = {}
+
 
 try:
     data = pandas.read_csv("./data/words_to_learn.csv")
@@ -14,7 +16,6 @@ except FileNotFoundError:
     data_dict = original_data.to_dict(orient="records")
 else:
     data_dict = data.to_dict(orient="records")
-    random_dict = {}
 
 
 def new_flash_card():
@@ -40,7 +41,7 @@ def flip_the_card():
 def is_known():
     data_dict.remove(random_dict)
     data = pandas.DataFrame(data_dict)
-    data.to_csv("./data/words_to_learn.csv")
+    data.to_csv("./data/words_to_learn.csv", index = False)
     new_flash_card()
 
 
