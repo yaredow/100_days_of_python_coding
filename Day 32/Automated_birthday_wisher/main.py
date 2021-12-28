@@ -1,22 +1,27 @@
-import smtplib
+from datetime import *
+import pandas
 import random
-import datetime as dt
+import smtplib
 
-my_email = "yaredyilma11@gmail.com"
+now = datetime.now()
+day = now.day
+month = now.month
+today = (month, day)
+email = "yaredyilma11@gmail.com"
 password = "dopellex11"
-# opening the text file
-with open("quotes.txt") as file:
-    file_list = file.readlines()
-daily_quote = random.choice(file_list)
-# obtaining the current day of the week
-now = dt.datetime.now()
-weekday = now.weekday()
-if weekday == 0:
-    # sending the email
+# reading the csv
+data = pandas.read_csv("birthdays.csv")
+new_dict = {(data_row["month"], data_row["day"]): data_row for (index, data_row) in data.iterrows()}
+if today in new_dict:
+    birthday_person = new_dict[today]
+    file_path = f"letter_templates/letter_{random.randint(1, 3)}.txt"
+    with open(file_path) as textFile:
+        letter = textFile.read()
+        new_letter = letter.replace("[NAME]", birthday_person["name"])
+        final_letter = new_letter.replace("Angela", "Yared")
     with smtplib.SMTP("smtp.gmail.com") as connection:
         connection.starttls()
-        connection.login(user=my_email, password=password)
-        connection.sendmail(
-            from_addr=my_email, to_addrs="yaredyilma2020@outlook.com",
-            msg=f"Subject:Monday Motivation\n\n{daily_quote}"
-        )
+        connection.login(user=email, password=password)
+        connection.sendmail(from_addr=email,
+                            to_addrs=birthday_person["email"],
+                            msg=f"Subject:Birthday Wish\n\n{final_letter}")
