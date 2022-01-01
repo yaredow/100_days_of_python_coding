@@ -29,14 +29,14 @@ graph_param = {
 
 # response1 = requests.post(url=graph_endpoint, json=graph_param, headers=headers)
 
-today = dt.datetime.today()
+today = dt.datetime(year=2021, month=12, day=31)
 year = today.strftime("%Y")
 day = today.strftime("%d")
 month = today.strftime("%m")
 date = f"{year}{month}{day}"
 post_pixel_param = {
     "date": date,
-    "quantity": "2",
+    "quantity": "10",
 }
 post_header = {
     "X-USER-TOKEN": TOKEN
