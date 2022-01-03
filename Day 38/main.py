@@ -1,5 +1,6 @@
 import requests
 import datetime as dt
+import os
 
 GENDER = "Male"
 WEIGHT_KG = 62
@@ -26,15 +27,24 @@ parameters = {
 response = requests.post(url=END_POINT, json=parameters, headers=headers)
 data = response.json()
 print(data)
+
 day = dt.datetime.now()
 today = day.strftime("%d/%m/%Y")
 time = day.strftime("%H:%M:%S")
-exercise = data["exercises"][0]["user_input"]
-duration = data["exercises"][0]["duration_min"]
 
-header = {
-    "Date": today,
-    "Time": time,
-    "Exercise": exercise,
-    "Duration": duration,
+bearer_header = {
+    "Authorization": f"Bearer {os.getenv('SHEETY_TOKEN')}",
+    "Content-Type": "application/json",
 }
+for exercise in data["exercises"]:
+    sheet_inputs = {
+        "workout": {
+            "date": today,
+            "time": time,
+            "exercise": (exercise["user_input"] + "ing").title(),
+            "duration": exercise["duration_min"],
+            "calories": exercise["nf_calories"]
+        }
+    }
+
+    response1 = requests.post(url=SHITTY_END_POINT, json=sheet_inputs, headers=bearer_header)
