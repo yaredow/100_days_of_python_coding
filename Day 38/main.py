@@ -8,6 +8,7 @@ HEIGHT_CM = 168
 AGE = 24
 APP_ID = "f591d690"
 API_KEY = "49875408ab30683f9454b67b1a3a4b39"
+TOKEN = os.getenv("SHEETY_TOKEN")
 END_POINT = "https://trackapi.nutritionix.com/v2/natural/exercise"
 SHITTY_END_POINT = "https://api.sheety.co/4720ea770e594a9ef987fddb9ccb6e73/myWorkout/workouts"
 USER_INPUT = input("Tell me which exercise you did? ")
@@ -25,15 +26,15 @@ parameters = {
 }
 
 response = requests.post(url=END_POINT, json=parameters, headers=headers)
+response.raise_for_status()
 data = response.json()
 print(data)
-
 day = dt.datetime.now()
 today = day.strftime("%d/%m/%Y")
 time = day.strftime("%H:%M:%S")
 
 bearer_header = {
-    "Authorization": f"Bearer {os.getenv('SHEETY_TOKEN')}",
+    "Authorization": "Bearer h1234772727jwjwuwwwrrty",
     "Content-Type": "application/json",
 }
 for exercise in data["exercises"]:
