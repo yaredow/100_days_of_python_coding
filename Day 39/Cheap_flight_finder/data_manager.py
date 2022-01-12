@@ -25,7 +25,5 @@ class DataManager:
                 url=f"{SHEETY_END_POINT}/{city['id']}",
                 json=new_city
             )
-            response1.raise_for_status()
             print(response1.text)
-
 
