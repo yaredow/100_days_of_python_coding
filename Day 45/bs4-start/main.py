@@ -15,6 +15,7 @@ article_texts = []
 article_lists = []
 soup = BeautifulSoup(yc_web_page, "html.parser")
 articles = soup.find_all("a", class_="titlelink")
+
 for article_tag in articles:
     text = article_tag.getText()
     article_texts.append(text)
