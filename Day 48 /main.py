@@ -13,5 +13,4 @@ for n in range(len(event_names)):
         "name": event_names[n].text,
     }
 print(events)
-events_csv = pandas.DataFrame("events.csv")
 driver.quit()
