@@ -1,7 +1,6 @@
 from bs4 import BeautifulSoup
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials, SpotifyOAuth
-
 import requests
 import os
 import lxml
