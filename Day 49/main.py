@@ -8,7 +8,8 @@ password = os.environ.get("LINK_PASS")
 path = "/usr/local/bin/chromedriver"
 driver = webdriver.Chrome(executable_path=path)
 driver.implicitly_wait(5)
-driver.get("https://www.linkedin.com/jobs/search/?currentJobId=2882799612&geoId=100212432&keywords=frontend%20developer&location=Ethiopia")
+driver.get("https://www.linkedin.com/jobs/search/?currentJobId=2882799612&geoId=100212432&keywords=frontend"
+           "%20developer&location=Ethiopia")
 driver.find_element(By.LINK_TEXT, "Sign in").click()
 email_address = driver.find_element(By.ID, "username")
 email_address.send_keys("yaredyilma11@gmail.com")
